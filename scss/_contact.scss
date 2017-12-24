@@ -1,0 +1,107 @@
+// Styling for the contact section
+section#contact {
+  background-color: $gray-900;
+  background-image: url('../img/map-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    .portfolio-link {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+      cursor: pointer;
+      .portfolio-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        opacity: 0;
+        background: fade-out($primary, .1);
+        &:hover {
+          opacity: 1;
+        }
+        .portfolio-hover-content {
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          height: 20px;
+          margin-top: -12px;
+          text-align: center;
+          color: white;
+          i {
+            margin-top: -12px;
+          }
+          h3,
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .portfolio-caption {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 25px;
+      text-align: center;
+      background-color: $white;
+      h4 {
+        margin: 0;
+        text-transform: none;
+      }
+      p {
+        font-size: 16px;
+        font-style: italic;
+        margin: 0;
+        @include serif-font;
+      }
+    }
+  }
+  .section-heading {
+    color: $white;
+  }
+  .form-group {
+    margin-bottom: 25px;
+    input,
+    textarea {
+      padding: 20px;
+    }
+    input.form-control {
+      height: auto;
+    }
+    textarea.form-control {
+      height: 248px;
+    }
+  }
+  .form-control:focus {
+    border-color: $primary;
+    box-shadow: none;
+  }
+  ::-webkit-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  :-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    /* Firefox 18- */
+    @include heading-font;
+  }
+  ::-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    /* Firefox 19+ */
+    @include heading-font;
+  }
+  :-ms-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+}
